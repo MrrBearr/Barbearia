@@ -81,6 +81,23 @@
 </head>
 <body>
 
+  <!-- ============================================ LOADER ============================================ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <span class="loader__mark">D</span>
+      <span class="loader__bar"><span></span></span>
+    </div>
+  </div>
+
+  <!-- ============================================ SCROLL PROGRESS ============================================ -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ============================================ CUSTOM CURSOR ============================================ -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+  </div>
+
   <!-- ============================================ HEADER ============================================ -->
   <header class="header" id="header">
     <div class="container header__inner">
@@ -119,35 +136,35 @@
       <div class="hero__overlay" aria-hidden="true"></div>
 
       <div class="container hero__content">
-        <span class="eyebrow reveal">Barbearia premium · São Paulo</span>
-        <h1 id="hero-title" class="hero__title reveal">
+        <span class="eyebrow" data-reveal="up">Barbearia premium · São Paulo</span>
+        <h1 id="hero-title" class="hero__title" data-reveal="lines">
           Estilo não <em>se improvisa.</em><br/>
           Se constrói.
         </h1>
-        <p class="hero__lead reveal">
+        <p class="hero__lead" data-reveal="up" data-reveal-delay="200">
           Cortes precisos, barba impecável e um atendimento que entende quem você é.
           Reserve seu horário e entre no domínio.
         </p>
 
-        <div class="hero__cta reveal">
-          <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20agendar%20um%20horário%20na%20DOMÍNIO." target="_blank" rel="noopener" class="btn btn--primary btn--lg">
+        <div class="hero__cta" data-reveal="up" data-reveal-delay="320">
+          <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20agendar%20um%20horário%20na%20DOMÍNIO." target="_blank" rel="noopener" class="btn btn--primary btn--lg" data-magnetic>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.88 11.9L4 20l4.2-1.1a7.93 7.93 0 0 0 3.84.98h.01a7.94 7.94 0 0 0 5.55-13.56ZM12.05 18.55h-.01a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.49.65.66-2.43-.16-.25a6.59 6.59 0 1 1 12.24-3.49 6.6 6.6 0 0 1-6.64 6.58Zm3.62-4.94c-.2-.1-1.18-.58-1.36-.65-.18-.07-.32-.1-.45.1-.13.2-.51.65-.63.78-.12.13-.23.15-.43.05-.2-.1-.84-.31-1.6-.99-.6-.53-1-1.18-1.11-1.38-.12-.2-.01-.31.09-.41.09-.09.2-.23.3-.35.1-.12.13-.2.2-.33.07-.13.03-.25-.02-.35-.05-.1-.45-1.08-.62-1.48-.16-.39-.33-.34-.45-.34h-.38a.74.74 0 0 0-.53.25c-.18.2-.7.69-.7 1.67 0 .98.72 1.93.82 2.06.1.13 1.4 2.14 3.4 3 .47.21.85.33 1.14.42.48.15.92.13 1.26.08.39-.06 1.18-.48 1.35-.95.17-.47.17-.86.12-.95-.05-.09-.18-.13-.38-.23Z"/></svg>
             Agendar pelo WhatsApp
           </a>
-          <a href="#servicos" class="btn btn--ghost btn--lg">Ver serviços</a>
+          <a href="#servicos" class="btn btn--ghost btn--lg" data-magnetic>Ver serviços</a>
         </div>
 
-        <div class="hero__meta reveal">
+        <div class="hero__meta" data-reveal="up" data-reveal-delay="480">
           <div class="hero__meta-item">
-            <strong>4.9</strong>
+            <strong data-counter data-from="0" data-to="4.9" data-decimals="1">0</strong>
             <span>Google · 800+ avaliações</span>
           </div>
           <div class="hero__meta-item">
-            <strong>10 anos</strong>
+            <strong data-counter data-from="0" data-to="10" data-suffix=" anos">0</strong>
             <span>de tradição em São Paulo</span>
           </div>
           <div class="hero__meta-item">
-            <strong>+12.000</strong>
+            <strong data-counter data-from="0" data-to="12000" data-prefix="+" data-format="thousand">0</strong>
             <span>clientes atendidos</span>
           </div>
         </div>
@@ -158,17 +175,37 @@
       </a>
     </section>
 
+    <!-- ============================================ MARQUEE ============================================ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span class="marquee__group">
+          <span>Agendamentos pelo WhatsApp</span><span class="marquee__sep">✦</span>
+          <span>Barbearia premium</span><span class="marquee__sep">✦</span>
+          <span>São Paulo · Consolação</span><span class="marquee__sep">✦</span>
+          <span>Desde 2014</span><span class="marquee__sep">✦</span>
+          <span>Atendimento exclusivo</span><span class="marquee__sep">✦</span>
+        </span>
+        <span class="marquee__group">
+          <span>Agendamentos pelo WhatsApp</span><span class="marquee__sep">✦</span>
+          <span>Barbearia premium</span><span class="marquee__sep">✦</span>
+          <span>São Paulo · Consolação</span><span class="marquee__sep">✦</span>
+          <span>Desde 2014</span><span class="marquee__sep">✦</span>
+          <span>Atendimento exclusivo</span><span class="marquee__sep">✦</span>
+        </span>
+      </div>
+    </div>
+
     <!-- ============================================ SERVIÇOS ============================================ -->
     <section class="section" id="servicos" aria-labelledby="servicos-title">
       <div class="container">
-        <header class="section__head reveal">
-          <span class="eyebrow">Serviços</span>
-          <h2 id="servicos-title" class="section__title">Precisão em cada detalhe.</h2>
-          <p class="section__sub">Procedimentos pensados para o homem que valoriza presença, conforto e identidade.</p>
+        <header class="section__head">
+          <span class="eyebrow" data-reveal="up">Serviços</span>
+          <h2 id="servicos-title" class="section__title" data-reveal="lines">Precisão em cada detalhe.</h2>
+          <p class="section__sub" data-reveal="up" data-reveal-delay="200">Procedimentos pensados para o homem que valoriza presença, conforto e identidade.</p>
         </header>
 
         <div class="services">
-          <article class="service-card reveal">
+          <article class="service-card" data-reveal="up" data-tilt>
             <div class="service-card__num">01</div>
             <h3 class="service-card__title">Corte Clássico</h3>
             <p class="service-card__desc">Estudo do formato do rosto, máquina e tesoura, finalização sob medida.</p>
@@ -178,7 +215,7 @@
             </div>
           </article>
 
-          <article class="service-card service-card--featured reveal">
+          <article class="service-card service-card--featured" data-reveal="up" data-reveal-delay="120" data-tilt>
             <div class="service-card__num">02</div>
             <span class="badge">Mais procurado</span>
             <h3 class="service-card__title">Corte + Barba</h3>
@@ -189,7 +226,7 @@
             </div>
           </article>
 
-          <article class="service-card reveal">
+          <article class="service-card" data-reveal="up" data-reveal-delay="240" data-tilt>
             <div class="service-card__num">03</div>
             <h3 class="service-card__title">Barba Premium</h3>
             <p class="service-card__desc">Toalha quente, óleo, navalha e finalização com produtos importados.</p>
@@ -199,7 +236,7 @@
             </div>
           </article>
 
-          <article class="service-card reveal">
+          <article class="service-card" data-reveal="up" data-tilt>
             <div class="service-card__num">04</div>
             <h3 class="service-card__title">Pigmentação</h3>
             <p class="service-card__desc">Disfarce de falhas e densidade visual com técnica precisa e natural.</p>
@@ -209,7 +246,7 @@
             </div>
           </article>
 
-          <article class="service-card reveal">
+          <article class="service-card" data-reveal="up" data-reveal-delay="120" data-tilt>
             <div class="service-card__num">05</div>
             <h3 class="service-card__title">Tratamento Capilar</h3>
             <p class="service-card__desc">Hidratação profunda, massagem e cuidado com couro cabeludo.</p>
@@ -219,7 +256,7 @@
             </div>
           </article>
 
-          <article class="service-card reveal">
+          <article class="service-card" data-reveal="up" data-reveal-delay="240" data-tilt>
             <div class="service-card__num">06</div>
             <h3 class="service-card__title">Day Experience</h3>
             <p class="service-card__desc">Corte, barba, sobrancelha, hidratação e drink. Uma experiência completa.</p>
@@ -230,8 +267,8 @@
           </article>
         </div>
 
-        <div class="section__cta reveal">
-          <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20conhecer%20os%20serviços%20da%20DOMÍNIO." target="_blank" rel="noopener" class="btn btn--primary">
+        <div class="section__cta" data-reveal="up">
+          <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20conhecer%20os%20serviços%20da%20DOMÍNIO." target="_blank" rel="noopener" class="btn btn--primary" data-magnetic>
             Reservar meu horário
           </a>
         </div>
@@ -241,14 +278,14 @@
     <!-- ============================================ DIFERENCIAIS ============================================ -->
     <section class="section section--alt" id="diferenciais" aria-labelledby="diferenciais-title">
       <div class="container">
-        <header class="section__head reveal">
-          <span class="eyebrow">Diferenciais</span>
-          <h2 id="diferenciais-title" class="section__title">A diferença está no padrão.</h2>
-          <p class="section__sub">Cada visita é tratada como única. Esse é o nosso compromisso.</p>
+        <header class="section__head">
+          <span class="eyebrow" data-reveal="up">Diferenciais</span>
+          <h2 id="diferenciais-title" class="section__title" data-reveal="lines">A diferença está no padrão.</h2>
+          <p class="section__sub" data-reveal="up" data-reveal-delay="200">Cada visita é tratada como única. Esse é o nosso compromisso.</p>
         </header>
 
         <div class="features">
-          <div class="feature reveal">
+          <div class="feature" data-reveal="up">
             <div class="feature__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 4 7v6c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V7l-8-5Z"/><path d="m9 12 2 2 4-4"/></svg>
             </div>
@@ -256,7 +293,7 @@
             <p>Time treinado, atualizado e referência em barbearia masculina.</p>
           </div>
 
-          <div class="feature reveal">
+          <div class="feature" data-reveal="up" data-reveal-delay="120">
             <div class="feature__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
             </div>
@@ -264,7 +301,7 @@
             <p>Seu horário é seu. Sem espera, sem improviso, sem desculpa.</p>
           </div>
 
-          <div class="feature reveal">
+          <div class="feature" data-reveal="up" data-reveal-delay="240">
             <div class="feature__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M3 12h18M3 17h12"/></svg>
             </div>
@@ -272,7 +309,7 @@
             <p>Linha premium para finalização e cuidado contínuo em casa.</p>
           </div>
 
-          <div class="feature reveal">
+          <div class="feature" data-reveal="up">
             <div class="feature__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12c0 5-4 9-9 9s-9-4-9-9 4-9 9-9"/><path d="m21 3-9 9"/><path d="M15 3h6v6"/></svg>
             </div>
@@ -280,7 +317,7 @@
             <p>Espaço climatizado, drink, café e silêncio quando você precisa.</p>
           </div>
 
-          <div class="feature reveal">
+          <div class="feature" data-reveal="up" data-reveal-delay="120">
             <div class="feature__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 7 9 18l-5-5"/></svg>
             </div>
@@ -288,7 +325,7 @@
             <p>Esterilização individual e protocolos rigorosos a cada cliente.</p>
           </div>
 
-          <div class="feature reveal">
+          <div class="feature" data-reveal="up" data-reveal-delay="240">
             <div class="feature__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
             </div>
@@ -302,7 +339,7 @@
     <!-- ============================================ SOBRE ============================================ -->
     <section class="section" id="sobre" aria-labelledby="sobre-title">
       <div class="container about">
-        <div class="about__media reveal">
+        <div class="about__media" data-reveal="up" data-parallax-y="40">
           <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80" alt="Interior da DOMÍNIO Barbearia em São Paulo" loading="lazy" />
           <div class="about__badge">
             <strong>2014</strong>
@@ -310,26 +347,26 @@
           </div>
         </div>
 
-        <div class="about__text reveal">
-          <span class="eyebrow">Sobre</span>
-          <h2 id="sobre-title" class="section__title">Mais que uma barbearia. Um território.</h2>
-          <p>
+        <div class="about__text">
+          <span class="eyebrow" data-reveal="up">Sobre</span>
+          <h2 id="sobre-title" class="section__title" data-reveal="lines">Mais que uma barbearia. Um território.</h2>
+          <p data-reveal="up" data-reveal-delay="200">
             A <strong>DOMÍNIO</strong> nasceu em <strong>São Paulo</strong> com uma proposta clara: resgatar o ritual
             do barbeiro com o padrão de um clube privado. Aqui, cada corte é estudado, cada barba é desenhada,
             e cada visita é construída para você sair melhor do que entrou.
           </p>
-          <p>
+          <p data-reveal="up" data-reveal-delay="280">
             Reunimos os melhores profissionais da cidade, produtos selecionados e um espaço pensado em cada detalhe.
             Você chega, respira fundo e deixa o resto com a gente.
           </p>
 
-          <ul class="about__list">
+          <ul class="about__list" data-reveal="up" data-reveal-delay="360">
             <li>+ 10 anos de tradição</li>
             <li>+ 12.000 clientes atendidos</li>
             <li>Avaliação 4.9 no Google</li>
           </ul>
 
-          <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20conhecer%20a%20DOMÍNIO." target="_blank" rel="noopener" class="btn btn--primary">Conhecer a casa</a>
+          <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20conhecer%20a%20DOMÍNIO." target="_blank" rel="noopener" class="btn btn--primary" data-reveal="up" data-reveal-delay="440" data-magnetic>Conhecer a casa</a>
         </div>
       </div>
     </section>
@@ -337,29 +374,29 @@
     <!-- ============================================ GALERIA ============================================ -->
     <section class="section section--alt" id="galeria" aria-labelledby="galeria-title">
       <div class="container">
-        <header class="section__head reveal">
-          <span class="eyebrow">Galeria</span>
-          <h2 id="galeria-title" class="section__title">O resultado fala por si.</h2>
-          <p class="section__sub">Selecionamos cortes recentes que mostram o nosso padrão.</p>
+        <header class="section__head">
+          <span class="eyebrow" data-reveal="up">Galeria</span>
+          <h2 id="galeria-title" class="section__title" data-reveal="lines">O resultado fala por si.</h2>
+          <p class="section__sub" data-reveal="up" data-reveal-delay="200">Selecionamos cortes recentes que mostram o nosso padrão.</p>
         </header>
 
         <div class="gallery">
-          <figure class="gallery__item gallery__item--tall reveal">
+          <figure class="gallery__item gallery__item--tall" data-reveal="mask">
             <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=80" alt="Corte degradê executado na DOMÍNIO" loading="lazy" />
           </figure>
-          <figure class="gallery__item reveal">
+          <figure class="gallery__item" data-reveal="mask" data-reveal-delay="120">
             <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=800&q=80" alt="Cliente em atendimento de barba" loading="lazy" />
           </figure>
-          <figure class="gallery__item reveal">
+          <figure class="gallery__item" data-reveal="mask" data-reveal-delay="240">
             <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=800&q=80" alt="Detalhe de barba aparada com navalha" loading="lazy" />
           </figure>
-          <figure class="gallery__item gallery__item--wide reveal">
+          <figure class="gallery__item gallery__item--wide" data-reveal="mask" data-reveal-delay="360">
             <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&q=80" alt="Ambiente interno da barbearia" loading="lazy" />
           </figure>
-          <figure class="gallery__item reveal">
+          <figure class="gallery__item" data-reveal="mask" data-reveal-delay="480">
             <img src="https://images.unsplash.com/photo-1521490214709-a5cc8e8b1ee1?w=800&q=80" alt="Cadeira de barbeiro clássica" loading="lazy" />
           </figure>
-          <figure class="gallery__item reveal">
+          <figure class="gallery__item" data-reveal="mask" data-reveal-delay="600">
             <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=800&q=80" alt="Resultado de corte masculino" loading="lazy" />
           </figure>
         </div>
@@ -369,9 +406,9 @@
     <!-- ============================================ DEPOIMENTOS ============================================ -->
     <section class="section" id="depoimentos" aria-labelledby="depoimentos-title">
       <div class="container">
-        <header class="section__head reveal">
-          <span class="eyebrow">Depoimentos</span>
-          <h2 id="depoimentos-title" class="section__title">A confiança de quem já passou por aqui.</h2>
+        <header class="section__head">
+          <span class="eyebrow" data-reveal="up">Depoimentos</span>
+          <h2 id="depoimentos-title" class="section__title" data-reveal="lines">A confiança de quem já passou por aqui.</h2>
         </header>
 
         <div class="testimonials" id="testimonials" aria-roledescription="carrossel">
@@ -437,59 +474,59 @@
     <!-- ============================================ FAQ ============================================ -->
     <section class="section section--alt" id="faq" aria-labelledby="faq-title">
       <div class="container faq">
-        <header class="section__head reveal">
-          <span class="eyebrow">FAQ</span>
-          <h2 id="faq-title" class="section__title">Perguntas frequentes.</h2>
+        <header class="section__head">
+          <span class="eyebrow" data-reveal="up">FAQ</span>
+          <h2 id="faq-title" class="section__title" data-reveal="lines">Perguntas frequentes.</h2>
         </header>
 
         <div class="faq__list">
-          <details class="faq__item reveal" open>
-            <summary>
-              Como faço para agendar?
+          <div class="faq__item is-open" data-faq data-reveal="up">
+            <button class="faq__q" aria-expanded="true">
+              <span>Como faço para agendar?</span>
               <span class="faq__icon" aria-hidden="true"></span>
-            </summary>
-            <p>O agendamento é feito direto pelo WhatsApp. Clique em qualquer botão de “Agendar” e nosso time confirma seu horário em poucos minutos.</p>
-          </details>
+            </button>
+            <div class="faq__a"><div><p>O agendamento é feito direto pelo WhatsApp. Clique em qualquer botão de “Agendar” e nosso time confirma seu horário em poucos minutos.</p></div></div>
+          </div>
 
-          <details class="faq__item reveal">
-            <summary>
-              Quais formas de pagamento vocês aceitam?
+          <div class="faq__item" data-faq data-reveal="up" data-reveal-delay="80">
+            <button class="faq__q" aria-expanded="false">
+              <span>Quais formas de pagamento vocês aceitam?</span>
               <span class="faq__icon" aria-hidden="true"></span>
-            </summary>
-            <p>Aceitamos PIX, todas as bandeiras de cartão (crédito e débito) e dinheiro. Para combos, parcelamos em até 3x sem juros.</p>
-          </details>
+            </button>
+            <div class="faq__a"><div><p>Aceitamos PIX, todas as bandeiras de cartão (crédito e débito) e dinheiro. Para combos, parcelamos em até 3x sem juros.</p></div></div>
+          </div>
 
-          <details class="faq__item reveal">
-            <summary>
-              Posso remarcar ou cancelar?
+          <div class="faq__item" data-faq data-reveal="up" data-reveal-delay="160">
+            <button class="faq__q" aria-expanded="false">
+              <span>Posso remarcar ou cancelar?</span>
               <span class="faq__icon" aria-hidden="true"></span>
-            </summary>
-            <p>Sim. Pedimos apenas que avise com no mínimo 2 horas de antecedência para que possamos liberar o horário para outro cliente.</p>
-          </details>
+            </button>
+            <div class="faq__a"><div><p>Sim. Pedimos apenas que avise com no mínimo 2 horas de antecedência para que possamos liberar o horário para outro cliente.</p></div></div>
+          </div>
 
-          <details class="faq__item reveal">
-            <summary>
-              Atendem sem agendamento?
+          <div class="faq__item" data-faq data-reveal="up" data-reveal-delay="240">
+            <button class="faq__q" aria-expanded="false">
+              <span>Atendem sem agendamento?</span>
               <span class="faq__icon" aria-hidden="true"></span>
-            </summary>
-            <p>Sempre que possível, sim. Mas damos prioridade total aos clientes agendados — para garantir seu lugar, reserve com antecedência.</p>
-          </details>
+            </button>
+            <div class="faq__a"><div><p>Sempre que possível, sim. Mas damos prioridade total aos clientes agendados — para garantir seu lugar, reserve com antecedência.</p></div></div>
+          </div>
 
-          <details class="faq__item reveal">
-            <summary>
-              Onde fica a barbearia?
+          <div class="faq__item" data-faq data-reveal="up" data-reveal-delay="320">
+            <button class="faq__q" aria-expanded="false">
+              <span>Onde fica a barbearia?</span>
               <span class="faq__icon" aria-hidden="true"></span>
-            </summary>
-            <p>Estamos na Rua Augusta, 1000 — Consolação, São Paulo. Estacionamento conveniado a 50 metros.</p>
-          </details>
+            </button>
+            <div class="faq__a"><div><p>Estamos na Rua Augusta, 1000 — Consolação, São Paulo. Estacionamento conveniado a 50 metros.</p></div></div>
+          </div>
 
-          <details class="faq__item reveal">
-            <summary>
-              Têm pacote para noivos ou empresas?
+          <div class="faq__item" data-faq data-reveal="up" data-reveal-delay="400">
+            <button class="faq__q" aria-expanded="false">
+              <span>Têm pacote para noivos ou empresas?</span>
               <span class="faq__icon" aria-hidden="true"></span>
-            </summary>
-            <p>Sim. Temos experiências personalizadas para padrinhos, eventos corporativos e fechamento de espaço. Fale com a gente para um orçamento exclusivo.</p>
-          </details>
+            </button>
+            <div class="faq__a"><div><p>Sim. Temos experiências personalizadas para padrinhos, eventos corporativos e fechamento de espaço. Fale com a gente para um orçamento exclusivo.</p></div></div>
+          </div>
         </div>
       </div>
     </section>
@@ -497,15 +534,17 @@
     <!-- ============================================ CTA FINAL ============================================ -->
     <section class="cta" aria-labelledby="cta-title">
       <div class="cta__bg" aria-hidden="true"></div>
-      <div class="container cta__inner reveal">
-        <span class="eyebrow eyebrow--gold">Reserva</span>
-        <h2 id="cta-title" class="cta__title">Seu próximo corte<br/>vai marcar a semana.</h2>
-        <p class="cta__sub">Agende em menos de um minuto. Sem cadastro, sem complicação. Só estilo.</p>
-        <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20agendar%20um%20horário%20na%20DOMÍNIO." target="_blank" rel="noopener" class="btn btn--primary btn--xl">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.88 11.9L4 20l4.2-1.1a7.93 7.93 0 0 0 3.84.98h.01a7.94 7.94 0 0 0 5.55-13.56ZM12.05 18.55h-.01a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.49.65.66-2.43-.16-.25a6.59 6.59 0 1 1 12.24-3.49 6.6 6.6 0 0 1-6.64 6.58Zm3.62-4.94c-.2-.1-1.18-.58-1.36-.65-.18-.07-.32-.1-.45.1-.13.2-.51.65-.63.78-.12.13-.23.15-.43.05-.2-.1-.84-.31-1.6-.99-.6-.53-1-1.18-1.11-1.38-.12-.2-.01-.31.09-.41.09-.09.2-.23.3-.35.1-.12.13-.2.2-.33.07-.13.03-.25-.02-.35-.05-.1-.45-1.08-.62-1.48-.16-.39-.33-.34-.45-.34h-.38a.74.74 0 0 0-.53.25c-.18.2-.7.69-.7 1.67 0 .98.72 1.93.82 2.06.1.13 1.4 2.14 3.4 3 .47.21.85.33 1.14.42.48.15.92.13 1.26.08.39-.06 1.18-.48 1.35-.95.17-.47.17-.86.12-.95-.05-.09-.18-.13-.38-.23Z"/></svg>
-          Agendar pelo WhatsApp
-        </a>
-        <p class="cta__hint">Resposta em até 5 minutos · Ter–Sáb</p>
+      <div class="container cta__inner">
+        <span class="eyebrow eyebrow--gold" data-reveal="up">Reserva</span>
+        <h2 id="cta-title" class="cta__title" data-reveal="lines">Seu próximo corte<br/>vai marcar a semana.</h2>
+        <p class="cta__sub" data-reveal="up" data-reveal-delay="200">Agende em menos de um minuto. Sem cadastro, sem complicação. Só estilo.</p>
+        <div data-reveal="up" data-reveal-delay="320">
+          <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20agendar%20um%20horário%20na%20DOMÍNIO." target="_blank" rel="noopener" class="btn btn--primary btn--xl" data-magnetic>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.88 11.9L4 20l4.2-1.1a7.93 7.93 0 0 0 3.84.98h.01a7.94 7.94 0 0 0 5.55-13.56ZM12.05 18.55h-.01a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.49.65.66-2.43-.16-.25a6.59 6.59 0 1 1 12.24-3.49 6.6 6.6 0 0 1-6.64 6.58Zm3.62-4.94c-.2-.1-1.18-.58-1.36-.65-.18-.07-.32-.1-.45.1-.13.2-.51.65-.63.78-.12.13-.23.15-.43.05-.2-.1-.84-.31-1.6-.99-.6-.53-1-1.18-1.11-1.38-.12-.2-.01-.31.09-.41.09-.09.2-.23.3-.35.1-.12.13-.2.2-.33.07-.13.03-.25-.02-.35-.05-.1-.45-1.08-.62-1.48-.16-.39-.33-.34-.45-.34h-.38a.74.74 0 0 0-.53.25c-.18.2-.7.69-.7 1.67 0 .98.72 1.93.82 2.06.1.13 1.4 2.14 3.4 3 .47.21.85.33 1.14.42.48.15.92.13 1.26.08.39-.06 1.18-.48 1.35-.95.17-.47.17-.86.12-.95-.05-.09-.18-.13-.38-.23Z"/></svg>
+            Agendar pelo WhatsApp
+          </a>
+        </div>
+        <p class="cta__hint" data-reveal="up" data-reveal-delay="440">Resposta em até 5 minutos · Ter–Sáb</p>
       </div>
     </section>
 
