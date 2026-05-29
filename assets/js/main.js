@@ -182,6 +182,15 @@
         { threshold: 0.14, rootMargin: '0px 0px -60px 0px' }
       );
       revealEls.forEach((el) => io.observe(el));
+
+      // Rede de segurança: depois de 5s da abertura da página, qualquer elemento
+      // que ainda não foi revelado é forçado a aparecer (evita imagens presas
+      // se o observer falhar por algum motivo).
+      setTimeout(() => {
+        document.querySelectorAll('[data-reveal]:not(.is-visible), .reveal:not(.is-visible)').forEach((el) => {
+          el.classList.add('is-visible');
+        });
+      }, 5000);
     } else {
       revealEls.forEach((el) => el.classList.add('is-visible'));
     }
