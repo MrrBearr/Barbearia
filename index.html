@@ -1,16 +1,3 @@
-<!--
-  ============================================================
-  DOMÍNIO BARBEARIA — Landing Page
-  ============================================================
-  PERSONALIZAÇÃO RÁPIDA (use Find & Replace no editor):
-    • Nome da marca .......... DOMÍNIO
-    • Cidade ................. São Paulo
-    • WhatsApp (link) ........ https://wa.me/5511999999999
-    • Telefone (exibido) ..... (11) 99999-9999
-    • Endereço ............... Rua Augusta, 1000 — Consolação
-    • Instagram .............. https://instagram.com/dominio.barbearia
-  ============================================================
--->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -18,20 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#0a0a0a" />
 
-  <!-- SEO -->
-  <title>DOMÍNIO Barbearia em São Paulo | Cortes, Barba e Estilo Premium</title>
-  <meta name="description" content="DOMÍNIO Barbearia em São Paulo. Cortes precisos, barba impecável e atendimento exclusivo. Agende seu horário pelo WhatsApp." />
-  <meta name="keywords" content="barbearia São Paulo, barbearia premium, corte masculino, barba, agendamento WhatsApp, DOMÍNIO" />
-  <meta name="author" content="DOMÍNIO Barbearia" />
-  <link rel="canonical" href="https://dominio-barbearia.com.br/" />
+  <title>DOMÍNIO Barbearia — Projeto demonstrativo da CA Studio</title>
+  <meta name="description" content="Projeto demonstrativo de site para barbearia criado pela CA Studio. Marca, contatos, depoimentos, números e demais informações são fictícios." />
+  <meta name="author" content="CA Studio" />
+  <meta name="robots" content="noindex, nofollow" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
-  <meta property="og:title" content="DOMÍNIO Barbearia em São Paulo | Estilo Premium" />
-  <meta property="og:description" content="Cortes precisos, barba impecável e atendimento exclusivo no coração de São Paulo. Agende pelo WhatsApp." />
+  <meta property="og:title" content="DOMÍNIO Barbearia — Projeto demonstrativo" />
+  <meta property="og:description" content="Demonstração fictícia de site para barbearia criada pela CA Studio." />
   <meta property="og:image" content="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=1200&q=80" />
-  <meta property="og:url" content="https://dominio-barbearia.com.br/" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,43 +27,13 @@
 
   <!-- Favicon (SVG inline, sem requisição extra) -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a0a0a'/%3E%3Ctext x='50' y='66' text-anchor='middle' font-family='Georgia,serif' font-size='56' font-weight='700' fill='%23c9a14a'%3ED%3C/text%3E%3C/svg%3E" />
+  <noscript><style>.intro,.loader,.cursor{display:none!important}body{overflow:auto!important}.reveal,[data-reveal],[data-split],[data-reveal-lines],.line__inner,.word>span{opacity:1!important;visibility:visible!important;transform:none!important;clip-path:none!important}</style></noscript>
 
-  <!-- Schema.org LocalBusiness -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HairSalon",
-    "name": "DOMÍNIO Barbearia",
-    "image": "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=1200&q=80",
-    "url": "https://dominio-barbearia.com.br/",
-    "telephone": "+55-11-99999-9999",
-    "priceRange": "$$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Rua Augusta, 1000",
-      "addressLocality": "São Paulo",
-      "addressRegion": "SP",
-      "postalCode": "01304-001",
-      "addressCountry": "BR"
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"],
-        "opens": "10:00",
-        "closes": "21:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "09:00",
-        "closes": "19:00"
-      }
-    ]
-  }
-  </script>
 </head>
 <body>
+  <aside class="demo-notice" id="demo-info" aria-label="Aviso de projeto demonstrativo">
+    <strong>Projeto demonstrativo da CA Studio</strong><span aria-hidden="true"> — </span><span>marca e informações fictícias</span>
+  </aside>
 
   <!-- ============================================ LOADER ============================================ -->
   <div class="loader" id="loader" aria-hidden="true">
@@ -117,12 +71,12 @@
         </ul>
       </nav>
 
-      <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20agendar%20um%20horário%20na%20DOMÍNIO." target="_blank" rel="noopener" class="btn btn--primary btn--sm header__cta">
+      <a href="https://wa.me/5583921483515" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm header__cta">
         <span>Agendar</span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -147,7 +101,7 @@
         </p>
 
         <div class="hero__cta" data-reveal="up" data-reveal-delay="320">
-          <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20agendar%20um%20horário%20na%20DOMÍNIO." target="_blank" rel="noopener" class="btn btn--primary btn--lg" data-magnetic>
+          <a href="https://wa.me/5583921483515" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg" data-magnetic>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.88 11.9L4 20l4.2-1.1a7.93 7.93 0 0 0 3.84.98h.01a7.94 7.94 0 0 0 5.55-13.56ZM12.05 18.55h-.01a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.49.65.66-2.43-.16-.25a6.59 6.59 0 1 1 12.24-3.49 6.6 6.6 0 0 1-6.64 6.58Zm3.62-4.94c-.2-.1-1.18-.58-1.36-.65-.18-.07-.32-.1-.45.1-.13.2-.51.65-.63.78-.12.13-.23.15-.43.05-.2-.1-.84-.31-1.6-.99-.6-.53-1-1.18-1.11-1.38-.12-.2-.01-.31.09-.41.09-.09.2-.23.3-.35.1-.12.13-.2.2-.33.07-.13.03-.25-.02-.35-.05-.1-.45-1.08-.62-1.48-.16-.39-.33-.34-.45-.34h-.38a.74.74 0 0 0-.53.25c-.18.2-.7.69-.7 1.67 0 .98.72 1.93.82 2.06.1.13 1.4 2.14 3.4 3 .47.21.85.33 1.14.42.48.15.92.13 1.26.08.39-.06 1.18-.48 1.35-.95.17-.47.17-.86.12-.95-.05-.09-.18-.13-.38-.23Z"/></svg>
             Agendar pelo WhatsApp
           </a>
@@ -156,16 +110,16 @@
 
         <div class="hero__meta" data-reveal="up" data-reveal-delay="480">
           <div class="hero__meta-item">
-            <strong data-counter data-from="0" data-to="4.9" data-decimals="1">0</strong>
-            <span>Google · 800+ avaliações</span>
+            <strong>Corte</strong>
+            <span>serviços em destaque</span>
           </div>
           <div class="hero__meta-item">
-            <strong data-counter data-from="0" data-to="10" data-suffix=" anos">0</strong>
-            <span>de tradição em São Paulo</span>
+            <strong>Barba</strong>
+            <span>opções bem explicadas</span>
           </div>
           <div class="hero__meta-item">
-            <strong data-counter data-from="0" data-to="12000" data-prefix="+" data-format="thousand">0</strong>
-            <span>clientes atendidos</span>
+            <strong>Estilo</strong>
+            <span>identidade própria</span>
           </div>
         </div>
       </div>
@@ -268,7 +222,7 @@
         </div>
 
         <div class="section__cta" data-reveal="up">
-          <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20conhecer%20os%20serviços%20da%20DOMÍNIO." target="_blank" rel="noopener" class="btn btn--primary" data-magnetic>
+          <a href="https://wa.me/5583921483515" target="_blank" rel="noopener noreferrer" class="btn btn--primary" data-magnetic>
             Reservar meu horário
           </a>
         </div>
@@ -361,12 +315,12 @@
           </p>
 
           <ul class="about__list" data-reveal="up" data-reveal-delay="360">
-            <li>+ 10 anos de tradição</li>
-            <li>+ 12.000 clientes atendidos</li>
-            <li>Avaliação 4.9 no Google</li>
+            <li>Serviços organizados</li>
+            <li>Galeria responsiva</li>
+            <li>Contato direto pelo WhatsApp</li>
           </ul>
 
-          <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20conhecer%20a%20DOMÍNIO." target="_blank" rel="noopener" class="btn btn--primary" data-reveal="up" data-reveal-delay="440" data-magnetic>Conhecer a casa</a>
+          <a href="https://wa.me/5583921483515" target="_blank" rel="noopener noreferrer" class="btn btn--primary" data-reveal="up" data-reveal-delay="440" data-magnetic>Conhecer a casa</a>
         </div>
       </div>
     </section>
@@ -376,8 +330,8 @@
       <div class="container">
         <header class="section__head">
           <span class="eyebrow" data-reveal="up">Galeria</span>
-          <h2 id="galeria-title" class="section__title" data-reveal="lines">O resultado fala por si.</h2>
-          <p class="section__sub" data-reveal="up" data-reveal-delay="200">Selecionamos cortes recentes que mostram o nosso padrão.</p>
+          <h2 id="galeria-title" class="section__title" data-reveal="lines">Referências visuais para inspirar o estilo.</h2>
+          <p class="section__sub" data-reveal="up" data-reveal-delay="200">Imagens de banco usadas apenas para demonstrar a composição da galeria.</p>
         </header>
 
         <div class="gallery">
@@ -407,14 +361,14 @@
     <section class="section" id="depoimentos" aria-labelledby="depoimentos-title">
       <div class="container">
         <header class="section__head">
-          <span class="eyebrow" data-reveal="up">Depoimentos</span>
-          <h2 id="depoimentos-title" class="section__title" data-reveal="lines">A confiança de quem já passou por aqui.</h2>
+          <span class="eyebrow" data-reveal="up">Depoimentos ilustrativos</span>
+          <h2 id="depoimentos-title" class="section__title" data-reveal="lines">Exemplos de como a prova social pode aparecer.</h2>
         </header>
 
         <div class="testimonials" id="testimonials" aria-roledescription="carrossel">
           <div class="testimonials__track" id="testimonialsTrack">
             <figure class="testimonial">
-              <div class="testimonial__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+              <div class="testimonial__stars" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
               <blockquote>
                 <p>“Sai diferente de qualquer corte que já fiz na vida. Atendimento de outro nível, do café à navalha.”</p>
               </blockquote>
@@ -425,7 +379,7 @@
             </figure>
 
             <figure class="testimonial">
-              <div class="testimonial__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+              <div class="testimonial__stars" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
               <blockquote>
                 <p>“Pontualidade, ambiente impecável e o melhor corte de São Paulo. Virei cliente fixo na primeira visita.”</p>
               </blockquote>
@@ -436,7 +390,7 @@
             </figure>
 
             <figure class="testimonial">
-              <div class="testimonial__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+              <div class="testimonial__stars" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
               <blockquote>
                 <p>“É outra experiência. Você entra cliente, sai membro. Recomendo de olhos fechados.”</p>
               </blockquote>
@@ -447,7 +401,7 @@
             </figure>
 
             <figure class="testimonial">
-              <div class="testimonial__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+              <div class="testimonial__stars" role="img" aria-label="5 de 5 estrelas">★★★★★</div>
               <blockquote>
                 <p>“Detalhe em tudo. Da recepção à finalização. Hoje só corto cabelo na DOMÍNIO.”</p>
               </blockquote>
@@ -459,11 +413,11 @@
           </div>
 
           <div class="testimonials__controls">
-            <button class="t-btn" id="tPrev" aria-label="Depoimento anterior">
+            <button type="button" class="t-btn" id="tPrev" aria-label="Depoimento anterior">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
             </button>
             <div class="testimonials__dots" id="testimonialsDots" role="tablist" aria-label="Selecionar depoimento"></div>
-            <button class="t-btn" id="tNext" aria-label="Próximo depoimento">
+            <button type="button" class="t-btn" id="tNext" aria-label="Próximo depoimento">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
             </button>
           </div>
@@ -481,7 +435,7 @@
 
         <div class="faq__list">
           <div class="faq__item is-open" data-faq data-reveal="up">
-            <button class="faq__q" aria-expanded="true">
+            <button type="button" class="faq__q" aria-expanded="true">
               <span>Como faço para agendar?</span>
               <span class="faq__icon" aria-hidden="true"></span>
             </button>
@@ -489,7 +443,7 @@
           </div>
 
           <div class="faq__item" data-faq data-reveal="up" data-reveal-delay="80">
-            <button class="faq__q" aria-expanded="false">
+            <button type="button" class="faq__q" aria-expanded="false">
               <span>Quais formas de pagamento vocês aceitam?</span>
               <span class="faq__icon" aria-hidden="true"></span>
             </button>
@@ -497,7 +451,7 @@
           </div>
 
           <div class="faq__item" data-faq data-reveal="up" data-reveal-delay="160">
-            <button class="faq__q" aria-expanded="false">
+            <button type="button" class="faq__q" aria-expanded="false">
               <span>Posso remarcar ou cancelar?</span>
               <span class="faq__icon" aria-hidden="true"></span>
             </button>
@@ -505,7 +459,7 @@
           </div>
 
           <div class="faq__item" data-faq data-reveal="up" data-reveal-delay="240">
-            <button class="faq__q" aria-expanded="false">
+            <button type="button" class="faq__q" aria-expanded="false">
               <span>Atendem sem agendamento?</span>
               <span class="faq__icon" aria-hidden="true"></span>
             </button>
@@ -513,7 +467,7 @@
           </div>
 
           <div class="faq__item" data-faq data-reveal="up" data-reveal-delay="320">
-            <button class="faq__q" aria-expanded="false">
+            <button type="button" class="faq__q" aria-expanded="false">
               <span>Onde fica a barbearia?</span>
               <span class="faq__icon" aria-hidden="true"></span>
             </button>
@@ -521,7 +475,7 @@
           </div>
 
           <div class="faq__item" data-faq data-reveal="up" data-reveal-delay="400">
-            <button class="faq__q" aria-expanded="false">
+            <button type="button" class="faq__q" aria-expanded="false">
               <span>Têm pacote para noivos ou empresas?</span>
               <span class="faq__icon" aria-hidden="true"></span>
             </button>
@@ -539,7 +493,7 @@
         <h2 id="cta-title" class="cta__title" data-reveal="lines">Seu próximo corte<br/>vai marcar a semana.</h2>
         <p class="cta__sub" data-reveal="up" data-reveal-delay="200">Agende em menos de um minuto. Sem cadastro, sem complicação. Só estilo.</p>
         <div data-reveal="up" data-reveal-delay="320">
-          <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20agendar%20um%20horário%20na%20DOMÍNIO." target="_blank" rel="noopener" class="btn btn--primary btn--xl" data-magnetic>
+          <a href="https://wa.me/5583921483515" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--xl" data-magnetic>
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.88 11.9L4 20l4.2-1.1a7.93 7.93 0 0 0 3.84.98h.01a7.94 7.94 0 0 0 5.55-13.56ZM12.05 18.55h-.01a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.49.65.66-2.43-.16-.25a6.59 6.59 0 1 1 12.24-3.49 6.6 6.6 0 0 1-6.64 6.58Zm3.62-4.94c-.2-.1-1.18-.58-1.36-.65-.18-.07-.32-.1-.45.1-.13.2-.51.65-.63.78-.12.13-.23.15-.43.05-.2-.1-.84-.31-1.6-.99-.6-.53-1-1.18-1.11-1.38-.12-.2-.01-.31.09-.41.09-.09.2-.23.3-.35.1-.12.13-.2.2-.33.07-.13.03-.25-.02-.35-.05-.1-.45-1.08-.62-1.48-.16-.39-.33-.34-.45-.34h-.38a.74.74 0 0 0-.53.25c-.18.2-.7.69-.7 1.67 0 .98.72 1.93.82 2.06.1.13 1.4 2.14 3.4 3 .47.21.85.33 1.14.42.48.15.92.13 1.26.08.39-.06 1.18-.48 1.35-.95.17-.47.17-.86.12-.95-.05-.09-.18-.13-.38-.23Z"/></svg>
             Agendar pelo WhatsApp
           </a>
@@ -560,10 +514,10 @@
         </a>
         <p class="footer__tag">Barbearia premium · São Paulo</p>
         <div class="footer__social">
-          <a href="https://instagram.com/dominio.barbearia" target="_blank" rel="noopener" aria-label="Instagram">
+          <a href="#demo-info" aria-label="Instagram ilustrativo — ver aviso da demonstração">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
           </a>
-          <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <a href="https://wa.me/5583921483515" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.88 11.9L4 20l4.2-1.1a7.93 7.93 0 0 0 3.84.98h.01a7.94 7.94 0 0 0 5.55-13.56Z"/></svg>
           </a>
         </div>
@@ -571,14 +525,14 @@
 
       <div class="footer__col">
         <h4>Contato</h4>
-        <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">(11) 99999-9999</a>
-        <a href="mailto:contato@dominio-barbearia.com.br">contato@dominio-barbearia.com.br</a>
+        <a href="https://wa.me/5583921483515" target="_blank" rel="noopener noreferrer">WhatsApp da CA Studio</a>
+        <p>Caio Alexandre · (83) 92148-3515</p>
       </div>
 
       <div class="footer__col">
-        <h4>Endereço</h4>
+        <h4>Endereço ilustrativo</h4>
         <p>Rua Augusta, 1000<br/>Consolação — São Paulo, SP</p>
-        <a href="https://maps.google.com/?q=Rua+Augusta+1000+São+Paulo" target="_blank" rel="noopener" class="footer__link">Ver no mapa →</a>
+        <a href="#demo-info" class="footer__link">Ver no mapa →</a>
       </div>
 
       <div class="footer__col">
@@ -588,13 +542,13 @@
     </div>
 
     <div class="footer__bottom container">
-      <small>© <span id="year"></span> DOMÍNIO Barbearia. Todos os direitos reservados.</small>
-      <small>São Paulo · Brasil</small>
+      <small>© <span id="year"></span> DOMÍNIO Barbearia · conceito fictício.</small>
+      <small>Marca e dados comerciais usados apenas para demonstração.</small>
     </div>
   </footer>
 
   <!-- WhatsApp flutuante -->
-  <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20agendar%20um%20horário%20na%20DOMÍNIO." target="_blank" rel="noopener" class="wa-float" aria-label="Agendar pelo WhatsApp">
+  <a href="https://wa.me/5583921483515" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="Agendar pelo WhatsApp">
     <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.88 11.9L4 20l4.2-1.1a7.93 7.93 0 0 0 3.84.98h.01a7.94 7.94 0 0 0 5.55-13.56ZM12.05 18.55h-.01a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.49.65.66-2.43-.16-.25a6.59 6.59 0 1 1 12.24-3.49 6.6 6.6 0 0 1-6.64 6.58Zm3.62-4.94c-.2-.1-1.18-.58-1.36-.65-.18-.07-.32-.1-.45.1-.13.2-.51.65-.63.78-.12.13-.23.15-.43.05-.2-.1-.84-.31-1.6-.99-.6-.53-1-1.18-1.11-1.38-.12-.2-.01-.31.09-.41.09-.09.2-.23.3-.35.1-.12.13-.2.2-.33.07-.13.03-.25-.02-.35-.05-.1-.45-1.08-.62-1.48-.16-.39-.33-.34-.45-.34h-.38a.74.74 0 0 0-.53.25c-.18.2-.7.69-.7 1.67 0 .98.72 1.93.82 2.06.1.13 1.4 2.14 3.4 3 .47.21.85.33 1.14.42.48.15.92.13 1.26.08.39-.06 1.18-.48 1.35-.95.17-.47.17-.86.12-.95-.05-.09-.18-.13-.38-.23Z"/></svg>
   </a>
 

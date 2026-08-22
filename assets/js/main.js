@@ -21,6 +21,13 @@
 (function () {
   'use strict';
 
+  const demoWhatsApp = `https://wa.me/5583921483515?text=${encodeURIComponent('Olá, Caio! Vi a demonstração da DOMÍNIO Barbearia e quero conversar sobre um site para o meu negócio.')}`;
+  document.querySelectorAll('a[href*="wa.me/"]').forEach((link) => {
+    link.href = demoWhatsApp;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+  });
+
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const isFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 

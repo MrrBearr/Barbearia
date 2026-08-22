@@ -1381,3 +1381,26 @@ body.is-loading { overflow: hidden; }
 @media (hover: none) {
   [data-tilt]:hover { transform: none; }
 }
+
+/* Aviso permanente: este site é uma demonstração fictícia. */
+:root { --demo-notice-height: 44px; }
+body { padding-top: var(--demo-notice-height); }
+.demo-notice {
+  position: fixed; inset: 0 0 auto; z-index: 10000;
+  min-height: var(--demo-notice-height); padding: 8px 18px;
+  display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
+  background: #c9a14a; color: #0a0a0a; border-bottom: 1px solid rgba(0,0,0,.3);
+  font: 600 12px/1.35 var(--font-sans); letter-spacing: .025em; text-align: center;
+}
+.demo-notice strong { font-weight: 800; }
+body > .header { top: var(--demo-notice-height); }
+@media (max-width: 560px) {
+  :root { --demo-notice-height: 58px; }
+  .demo-notice { padding-inline: 14px; }
+  .demo-notice span[aria-hidden] { display: none; }
+  .demo-notice span:last-child { flex-basis: 100%; }
+}
+html, body { max-width: 100%; overflow-x: clip; }
+img, svg, video { max-width: 100%; }
+section[id] { scroll-margin-top: calc(var(--demo-notice-height) + 84px); }
+@media (hover: none), (pointer: coarse) { .btn, .menu-toggle, .faq__q, .t-btn { min-height: 44px; } }
